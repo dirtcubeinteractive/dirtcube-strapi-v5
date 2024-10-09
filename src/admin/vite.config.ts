@@ -7,7 +7,9 @@ export default (config: UserConfig) => {
             alias: {
                 '@': '/src',
             },
-            port: 5174
+            server: {
+                port: 5174, // Replace with your desired port number
+            }
         },
     });
 };
