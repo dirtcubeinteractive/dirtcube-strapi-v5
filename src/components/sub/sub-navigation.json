@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_sub_sub_navigations",
+  "info": {
+    "displayName": "sub-navigation"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "isActive": {
+      "type": "boolean"
+    },
+    "position": {
+      "type": "integer"
+    },
+    "section": {
+      "type": "enumeration",
+      "enum": [
+        "header",
+        "footer",
+        "both"
+      ]
+    }
+  }
+}
