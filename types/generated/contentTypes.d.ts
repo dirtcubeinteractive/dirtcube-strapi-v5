@@ -512,6 +512,39 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiContactDetailContactDetail
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'contact_details';
+  info: {
+    singularName: 'contact-detail';
+    pluralName: 'contact-details';
+    displayName: 'Contact_detail';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Schema.Attribute.String;
+    email: Schema.Attribute.String;
+    company: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
+    inquiry_category: Schema.Attribute.String;
+    inquiry_details: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::contact-detail.contact-detail'
+    >;
+  };
+}
+
 export interface ApiNavigationNavigation extends Struct.CollectionTypeSchema {
   collectionName: 'navigations';
   info: {
@@ -951,6 +984,7 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about.about': ApiAboutAbout;
+      'api::contact-detail.contact-detail': ApiContactDetailContactDetail;
       'api::navigation.navigation': ApiNavigationNavigation;
       'api::team.team': ApiTeamTeam;
       'admin::permission': AdminPermission;
