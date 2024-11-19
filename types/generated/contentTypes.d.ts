@@ -545,6 +545,41 @@ export interface ApiContactDetailContactDetail
   };
 }
 
+export interface ApiDiscoverSpecterDiscoverSpecter
+  extends Struct.SingleTypeSchema {
+  collectionName: 'discover_specters';
+  info: {
+    singularName: 'discover-specter';
+    pluralName: 'discover-specters';
+    displayName: 'discover-specter';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Hero: Schema.Attribute.Component<'sub.hero', false>;
+    FeaturesList: Schema.Attribute.Component<'sub.features-list', true>;
+    HighlightsList: Schema.Attribute.Component<'sub.highlights-list', true>;
+    FeaturesTitle: Schema.Attribute.String;
+    FeaturesDescription: Schema.Attribute.String;
+    Bottom: Schema.Attribute.Component<'sub.bottom', false>;
+    Cards: Schema.Attribute.Component<'sub.cards', true>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::discover-specter.discover-specter'
+    >;
+  };
+}
+
 export interface ApiNavigationNavigation extends Struct.CollectionTypeSchema {
   collectionName: 'navigations';
   info: {
@@ -985,6 +1020,7 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about.about': ApiAboutAbout;
       'api::contact-detail.contact-detail': ApiContactDetailContactDetail;
+      'api::discover-specter.discover-specter': ApiDiscoverSpecterDiscoverSpecter;
       'api::navigation.navigation': ApiNavigationNavigation;
       'api::team.team': ApiTeamTeam;
       'admin::permission': AdminPermission;

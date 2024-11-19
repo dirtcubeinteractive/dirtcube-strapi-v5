@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_sub_highlights_lists",
+  "info": {
+    "displayName": "HighlightsList"
+  },
+  "options": {},
+  "attributes": {
+    "photo": {
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

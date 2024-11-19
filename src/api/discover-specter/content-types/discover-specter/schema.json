@@ -1,0 +1,52 @@
+{
+  "kind": "singleType",
+  "collectionName": "discover_specters",
+  "info": {
+    "singularName": "discover-specter",
+    "pluralName": "discover-specters",
+    "displayName": "discover-specter",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Hero": {
+      "displayName": "Hero",
+      "type": "component",
+      "repeatable": false,
+      "component": "sub.hero"
+    },
+    "FeaturesList": {
+      "displayName": "FeaturesList",
+      "type": "component",
+      "repeatable": true,
+      "component": "sub.features-list"
+    },
+    "HighlightsList": {
+      "displayName": "HighlightsList",
+      "type": "component",
+      "repeatable": true,
+      "component": "sub.highlights-list"
+    },
+    "FeaturesTitle": {
+      "type": "string"
+    },
+    "FeaturesDescription": {
+      "type": "string"
+    },
+    "Bottom": {
+      "displayName": "Bottom",
+      "type": "component",
+      "repeatable": false,
+      "component": "sub.bottom"
+    },
+    "Cards": {
+      "displayName": "Cards",
+      "type": "component",
+      "repeatable": true,
+      "component": "sub.cards"
+    }
+  }
+}
