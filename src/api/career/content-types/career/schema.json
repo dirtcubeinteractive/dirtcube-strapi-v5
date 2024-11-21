@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "careers",
+  "info": {
+    "singularName": "career",
+    "pluralName": "careers",
+    "displayName": "Career"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Heading": {
+      "type": "text"
+    },
+    "ButtonText": {
+      "type": "string"
+    },
+    "JobPostingTitle": {
+      "type": "string"
+    },
+    "Intro": {
+      "displayName": "Intro",
+      "type": "component",
+      "repeatable": true,
+      "component": "sub.intro"
+    }
+  }
+}

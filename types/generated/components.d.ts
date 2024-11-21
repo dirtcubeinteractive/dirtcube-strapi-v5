@@ -25,6 +25,18 @@ export interface SubSubNavigation extends Struct.ComponentSchema {
   };
 }
 
+export interface SubIntro extends Struct.ComponentSchema {
+  collectionName: 'components_sub_intros';
+  info: {
+    displayName: 'Intro';
+  };
+  attributes: {
+    photo: Schema.Attribute.Media<'images' | 'files'>;
+    Title: Schema.Attribute.String;
+    Description: Schema.Attribute.Text;
+  };
+}
+
 export interface SubHighlightsList extends Struct.ComponentSchema {
   collectionName: 'components_sub_highlights_lists';
   info: {
@@ -124,6 +136,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'sub.team': SubTeam;
       'sub.sub-navigation': SubSubNavigation;
+      'sub.intro': SubIntro;
       'sub.highlights-list': SubHighlightsList;
       'sub.hero': SubHero;
       'sub.hero-section': SubHeroSection;

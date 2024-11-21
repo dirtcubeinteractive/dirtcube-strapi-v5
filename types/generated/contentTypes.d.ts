@@ -512,6 +512,33 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiCareerCareer extends Struct.SingleTypeSchema {
+  collectionName: 'careers';
+  info: {
+    singularName: 'career';
+    pluralName: 'careers';
+    displayName: 'Career';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Heading: Schema.Attribute.Text;
+    ButtonText: Schema.Attribute.String;
+    JobPostingTitle: Schema.Attribute.String;
+    Intro: Schema.Attribute.Component<'sub.intro', true>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::career.career'>;
+  };
+}
+
 export interface ApiContactDetailContactDetail
   extends Struct.CollectionTypeSchema {
   collectionName: 'contact_details';
@@ -1019,6 +1046,7 @@ declare module '@strapi/strapi' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about.about': ApiAboutAbout;
+      'api::career.career': ApiCareerCareer;
       'api::contact-detail.contact-detail': ApiContactDetailContactDetail;
       'api::discover-specter.discover-specter': ApiDiscoverSpecterDiscoverSpecter;
       'api::navigation.navigation': ApiNavigationNavigation;
