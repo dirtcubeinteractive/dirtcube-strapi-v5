@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sub_hero_section_dirtcubes",
+  "info": {
+    "displayName": "HeroSectionDirtcube"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "text"
+    },
+    "TitleNumber": {
+      "type": "integer"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Button": {
+      "type": "string"
+    },
+    "Photo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sub_offer_sections",
+  "info": {
+    "displayName": "OfferSection"
+  },
+  "options": {},
+  "attributes": {
+    "Photo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "OfferBox": {
+      "displayName": "OfferBox",
+      "type": "component",
+      "repeatable": false,
+      "component": "sub.offer-box"
+    }
+  }
+}

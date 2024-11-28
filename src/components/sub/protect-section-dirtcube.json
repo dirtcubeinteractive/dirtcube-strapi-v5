@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_sub_protect_section_dirtcubes",
+  "info": {
+    "displayName": "ProtectSectionDirtcube"
+  },
+  "options": {},
+  "attributes": {
+    "Photo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Title": {
+      "type": "text"
+    },
+    "TextList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sub.text-list"
+    }
+  }
+}

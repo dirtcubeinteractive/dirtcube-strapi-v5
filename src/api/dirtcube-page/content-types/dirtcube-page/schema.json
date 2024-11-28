@@ -1,0 +1,68 @@
+{
+  "kind": "singleType",
+  "collectionName": "dirtcube_pages",
+  "info": {
+    "singularName": "dirtcube-page",
+    "pluralName": "dirtcube-pages",
+    "displayName": "dirtcube-page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HeroSectionDirtcube": {
+      "displayName": "HeroSectionDirtcube",
+      "type": "component",
+      "repeatable": false,
+      "component": "sub.hero-section-dirtcube"
+    },
+    "DetailSectionDirtcube": {
+      "displayName": "DetailSectionDirtcube",
+      "type": "component",
+      "repeatable": true,
+      "component": "sub.detail-section-dirtcube"
+    },
+    "WorkSectionDirtcube": {
+      "displayName": "WorkSectionDirtcube",
+      "type": "component",
+      "repeatable": false,
+      "component": "sub.work-section-dirtcube"
+    },
+    "CardPoint": {
+      "displayName": "CardPoint",
+      "type": "component",
+      "repeatable": true,
+      "component": "sub.card-point"
+    },
+    "ProtectSectionDirtcube": {
+      "displayName": "ProtectSectionDirtcube",
+      "type": "component",
+      "repeatable": false,
+      "component": "sub.protect-section-dirtcube"
+    },
+    "AcquaintanceSectionDirtcube": {
+      "displayName": "AcquaintanceSectionDirtcube",
+      "type": "component",
+      "repeatable": true,
+      "component": "sub.acquaintance-section-dirtcube"
+    },
+    "OfferSection": {
+      "displayName": "OfferSection",
+      "type": "component",
+      "repeatable": false,
+      "component": "sub.offer-section"
+    },
+    "AdvantagesSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sub.card-point"
+    },
+    "BottomSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sub.bottom"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_sub_detail_section_dirtcubes",
+  "info": {
+    "displayName": "DetailSectionDirtcube",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "TextList": {
+      "displayName": "TextList",
+      "type": "component",
+      "repeatable": true,
+      "component": "sub.text-list"
+    },
+    "SubTitle": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "text"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Location": {
+      "displayName": "Locations",
+      "type": "component",
+      "repeatable": true,
+      "component": "sub.locations"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_sub_offer_boxes",
+  "info": {
+    "displayName": "OfferBox"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Date": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Button": {
+      "type": "string"
+    },
+    "Timestamp": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sub_work_section_dirtcubes",
+  "info": {
+    "displayName": "WorkSectionDirtcube"
+  },
+  "options": {},
+  "attributes": {
+    "photo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sub_locations",
+  "info": {
+    "displayName": "Location",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "place": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "counter": {
+      "type": "string"
+    }
+  }
+}

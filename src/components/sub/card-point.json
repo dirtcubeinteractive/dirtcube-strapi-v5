@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sub_card_points",
+  "info": {
+    "displayName": "CardPoint"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Details": {
+      "type": "blocks"
+    },
+    "Photo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

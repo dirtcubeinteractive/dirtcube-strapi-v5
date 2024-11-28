@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_sub_acquaintance_section_dirtcubes",
+  "info": {
+    "displayName": "AcquaintanceSectionDirtcube"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "TextList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sub.text-list"
+    },
+    "Location": {
+      "type": "string"
+    },
+    "Video": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

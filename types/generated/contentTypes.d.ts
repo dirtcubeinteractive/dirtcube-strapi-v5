@@ -572,6 +572,57 @@ export interface ApiContactDetailContactDetail
   };
 }
 
+export interface ApiDirtcubePageDirtcubePage extends Struct.SingleTypeSchema {
+  collectionName: 'dirtcube_pages';
+  info: {
+    singularName: 'dirtcube-page';
+    pluralName: 'dirtcube-pages';
+    displayName: 'dirtcube-page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    HeroSectionDirtcube: Schema.Attribute.Component<
+      'sub.hero-section-dirtcube',
+      false
+    >;
+    DetailSectionDirtcube: Schema.Attribute.Component<
+      'sub.detail-section-dirtcube',
+      true
+    >;
+    WorkSectionDirtcube: Schema.Attribute.Component<
+      'sub.work-section-dirtcube',
+      false
+    >;
+    CardPoint: Schema.Attribute.Component<'sub.card-point', true>;
+    ProtectSectionDirtcube: Schema.Attribute.Component<
+      'sub.protect-section-dirtcube',
+      false
+    >;
+    AcquaintanceSectionDirtcube: Schema.Attribute.Component<
+      'sub.acquaintance-section-dirtcube',
+      true
+    >;
+    OfferSection: Schema.Attribute.Component<'sub.offer-section', false>;
+    AdvantagesSection: Schema.Attribute.Component<'sub.card-point', false>;
+    BottomSection: Schema.Attribute.Component<'sub.bottom', false>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::dirtcube-page.dirtcube-page'
+    >;
+  };
+}
+
 export interface ApiDiscoverSpecterDiscoverSpecter
   extends Struct.SingleTypeSchema {
   collectionName: 'discover_specters';
@@ -1048,6 +1099,7 @@ declare module '@strapi/strapi' {
       'api::about.about': ApiAboutAbout;
       'api::career.career': ApiCareerCareer;
       'api::contact-detail.contact-detail': ApiContactDetailContactDetail;
+      'api::dirtcube-page.dirtcube-page': ApiDirtcubePageDirtcubePage;
       'api::discover-specter.discover-specter': ApiDiscoverSpecterDiscoverSpecter;
       'api::navigation.navigation': ApiNavigationNavigation;
       'api::team.team': ApiTeamTeam;
