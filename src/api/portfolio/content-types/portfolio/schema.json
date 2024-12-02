@@ -1,0 +1,42 @@
+{
+  "kind": "singleType",
+  "collectionName": "portfolios",
+  "info": {
+    "singularName": "portfolio",
+    "pluralName": "portfolios",
+    "displayName": "Portfolio",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "isHeroSectionActive": {
+      "type": "boolean"
+    },
+    "isCatalogActive": {
+      "type": "boolean"
+    },
+    "isBottom": {
+      "type": "boolean"
+    },
+    "HeroSectionPortfolio": {
+      "displayName": "HeroSectionPortfolio",
+      "type": "component",
+      "repeatable": false,
+      "component": "sub.hero-section-portfolio"
+    },
+    "CatalogSectionPortfolio": {
+      "displayName": "CatalogSectionPortfolio",
+      "type": "component",
+      "repeatable": true,
+      "component": "sub.catalog-section-portfolio"
+    },
+    "BottomSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sub.bottom"
+    }
+  }
+}

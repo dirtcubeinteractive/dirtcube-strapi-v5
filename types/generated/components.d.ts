@@ -99,6 +99,37 @@ export interface SubLocations extends Struct.ComponentSchema {
   };
 }
 
+export interface SubItemTag extends Struct.ComponentSchema {
+  collectionName: 'components_sub_item_tags';
+  info: {
+    displayName: 'itemTag';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    color: Schema.Attribute.String;
+  };
+}
+
+export interface SubItemList extends Struct.ComponentSchema {
+  collectionName: 'components_sub_item_lists';
+  info: {
+    displayName: 'itemList';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    code: Schema.Attribute.String;
+    crypto: Schema.Attribute.String;
+    price: Schema.Attribute.Integer;
+    itemTag: Schema.Attribute.Component<'sub.item-tag', true>;
+    level: Schema.Attribute.Integer;
+    levelTitle: Schema.Attribute.String;
+    location: Schema.Attribute.String;
+    coordinates: Schema.Attribute.String;
+    url: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images'>;
+  };
+}
+
 export interface SubIntro extends Struct.ComponentSchema {
   collectionName: 'components_sub_intros';
   info: {
@@ -150,6 +181,25 @@ export interface SubHeroSection extends Struct.ComponentSchema {
   };
 }
 
+export interface SubHeroSectionPortfolio extends Struct.ComponentSchema {
+  collectionName: 'components_sub_hero_section_portfolios';
+  info: {
+    displayName: 'HeroSectionPortfolio';
+    description: '';
+  };
+  attributes: {
+    Title: Schema.Attribute.String;
+    TitleNumber: Schema.Attribute.Integer;
+    Description: Schema.Attribute.Text;
+    ButtonText: Schema.Attribute.String;
+    Photo: Schema.Attribute.Media<'images'>;
+    HeadlinesPortfolio: Schema.Attribute.Component<
+      'sub.headlines-portfoliio',
+      true
+    >;
+  };
+}
+
 export interface SubHeroSectionDirtcube extends Struct.ComponentSchema {
   collectionName: 'components_sub_hero_section_dirtcubes';
   info: {
@@ -161,6 +211,20 @@ export interface SubHeroSectionDirtcube extends Struct.ComponentSchema {
     Description: Schema.Attribute.Text;
     Button: Schema.Attribute.String;
     Photo: Schema.Attribute.Media<'images'>;
+  };
+}
+
+export interface SubHeadlinesPortfoliio extends Struct.ComponentSchema {
+  collectionName: 'components_sub_headlines_portfoliios';
+  info: {
+    displayName: 'HeadlinesPortfoliio';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    value: Schema.Attribute.Integer;
+    subValue: Schema.Attribute.Integer;
+    photo: Schema.Attribute.Media<'images'>;
+    color: Schema.Attribute.String;
   };
 }
 
@@ -205,6 +269,19 @@ export interface SubDetailSectionDirtcube extends Struct.ComponentSchema {
     Content: Schema.Attribute.Text;
     photo: Schema.Attribute.Media<'images'>;
     Location: Schema.Attribute.Component<'sub.locations', true>;
+  };
+}
+
+export interface SubCatalogSectionPortfolio extends Struct.ComponentSchema {
+  collectionName: 'components_sub_catalog_section_portfolios';
+  info: {
+    displayName: 'CatalogSectionPortfolio';
+  };
+  attributes: {
+    title: Schema.Attribute.String;
+    photo: Schema.Attribute.Media<'images'>;
+    color: Schema.Attribute.String;
+    itemList: Schema.Attribute.Component<'sub.item-list', true>;
   };
 }
 
@@ -270,14 +347,19 @@ declare module '@strapi/strapi' {
       'sub.offer-section': SubOfferSection;
       'sub.offer-box': SubOfferBox;
       'sub.locations': SubLocations;
+      'sub.item-tag': SubItemTag;
+      'sub.item-list': SubItemList;
       'sub.intro': SubIntro;
       'sub.highlights-list': SubHighlightsList;
       'sub.hero': SubHero;
       'sub.hero-section': SubHeroSection;
+      'sub.hero-section-portfolio': SubHeroSectionPortfolio;
       'sub.hero-section-dirtcube': SubHeroSectionDirtcube;
+      'sub.headlines-portfoliio': SubHeadlinesPortfoliio;
       'sub.graphic-headings': SubGraphicHeadings;
       'sub.features-list': SubFeaturesList;
       'sub.detail-section-dirtcube': SubDetailSectionDirtcube;
+      'sub.catalog-section-portfolio': SubCatalogSectionPortfolio;
       'sub.cards': SubCards;
       'sub.card-point': SubCardPoint;
       'sub.bottom': SubBottom;

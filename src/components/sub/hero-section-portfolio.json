@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_sub_hero_section_portfolios",
+  "info": {
+    "displayName": "HeroSectionPortfolio",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "TitleNumber": {
+      "type": "integer"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "ButtonText": {
+      "type": "string"
+    },
+    "Photo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "HeadlinesPortfolio": {
+      "displayName": "HeadlinesPortfoliio",
+      "type": "component",
+      "repeatable": true,
+      "component": "sub.headlines-portfoliio"
+    }
+  }
+}

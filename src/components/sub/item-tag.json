@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_sub_item_tags",
+  "info": {
+    "displayName": "itemTag"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string"
+    }
+  }
+}

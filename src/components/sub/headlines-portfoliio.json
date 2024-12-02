@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sub_headlines_portfoliios",
+  "info": {
+    "displayName": "HeadlinesPortfoliio"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "value": {
+      "type": "integer"
+    },
+    "subValue": {
+      "type": "integer"
+    },
+    "photo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "color": {
+      "type": "string"
+    }
+  }
+}

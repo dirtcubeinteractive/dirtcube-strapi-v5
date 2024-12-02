@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_sub_item_lists",
+  "info": {
+    "displayName": "itemList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "crypto": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "itemTag": {
+      "displayName": "itemTag",
+      "type": "component",
+      "repeatable": true,
+      "component": "sub.item-tag"
+    },
+    "level": {
+      "type": "integer"
+    },
+    "levelTitle": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "coordinates": {
+      "type": "string"
+    },
+    "url": {
+      "type": "text"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

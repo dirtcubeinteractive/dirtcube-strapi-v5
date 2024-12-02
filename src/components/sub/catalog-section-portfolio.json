@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sub_catalog_section_portfolios",
+  "info": {
+    "displayName": "CatalogSectionPortfolio"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "photo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "color": {
+      "type": "string"
+    },
+    "itemList": {
+      "displayName": "itemList",
+      "type": "component",
+      "repeatable": true,
+      "component": "sub.item-list"
+    }
+  }
+}

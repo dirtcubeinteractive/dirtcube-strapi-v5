@@ -4,7 +4,7 @@
   "info": {
     "singularName": "dirtcube-page",
     "pluralName": "dirtcube-pages",
-    "displayName": "dirtcube-page",
+    "displayName": "Gamestarz",
     "description": ""
   },
   "options": {
@@ -63,6 +63,30 @@
       "type": "component",
       "repeatable": false,
       "component": "sub.bottom"
+    },
+    "isHeroSectionActive": {
+      "type": "boolean"
+    },
+    "isDetailsSectionActive": {
+      "type": "boolean"
+    },
+    "isWorkSectionActive": {
+      "type": "boolean"
+    },
+    "isProtectSectionActive": {
+      "type": "boolean"
+    },
+    "isAcquaintanceSectionActive": {
+      "type": "boolean"
+    },
+    "isOfferSectionActive": {
+      "type": "boolean"
+    },
+    "isAdvantagesSectionActive": {
+      "type": "boolean"
+    },
+    "isBottomSectionActive": {
+      "type": "boolean"
     }
   }
 }

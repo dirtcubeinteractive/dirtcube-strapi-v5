@@ -577,7 +577,7 @@ export interface ApiDirtcubePageDirtcubePage extends Struct.SingleTypeSchema {
   info: {
     singularName: 'dirtcube-page';
     pluralName: 'dirtcube-pages';
-    displayName: 'dirtcube-page';
+    displayName: 'Gamestarz';
     description: '';
   };
   options: {
@@ -608,6 +608,14 @@ export interface ApiDirtcubePageDirtcubePage extends Struct.SingleTypeSchema {
     OfferSection: Schema.Attribute.Component<'sub.offer-section', false>;
     AdvantagesSection: Schema.Attribute.Component<'sub.card-point', false>;
     BottomSection: Schema.Attribute.Component<'sub.bottom', false>;
+    isHeroSectionActive: Schema.Attribute.Boolean;
+    isDetailsSectionActive: Schema.Attribute.Boolean;
+    isWorkSectionActive: Schema.Attribute.Boolean;
+    isProtectSectionActive: Schema.Attribute.Boolean;
+    isAcquaintanceSectionActive: Schema.Attribute.Boolean;
+    isOfferSectionActive: Schema.Attribute.Boolean;
+    isAdvantagesSectionActive: Schema.Attribute.Boolean;
+    isBottomSectionActive: Schema.Attribute.Boolean;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -687,6 +695,45 @@ export interface ApiNavigationNavigation extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::navigation.navigation'
+    >;
+  };
+}
+
+export interface ApiPortfolioPortfolio extends Struct.SingleTypeSchema {
+  collectionName: 'portfolios';
+  info: {
+    singularName: 'portfolio';
+    pluralName: 'portfolios';
+    displayName: 'Portfolio';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    isHeroSectionActive: Schema.Attribute.Boolean;
+    isCatalogActive: Schema.Attribute.Boolean;
+    isBottom: Schema.Attribute.Boolean;
+    HeroSectionPortfolio: Schema.Attribute.Component<
+      'sub.hero-section-portfolio',
+      false
+    >;
+    CatalogSectionPortfolio: Schema.Attribute.Component<
+      'sub.catalog-section-portfolio',
+      true
+    >;
+    BottomSection: Schema.Attribute.Component<'sub.bottom', false>;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::portfolio.portfolio'
     >;
   };
 }
@@ -1102,6 +1149,7 @@ declare module '@strapi/strapi' {
       'api::dirtcube-page.dirtcube-page': ApiDirtcubePageDirtcubePage;
       'api::discover-specter.discover-specter': ApiDiscoverSpecterDiscoverSpecter;
       'api::navigation.navigation': ApiNavigationNavigation;
+      'api::portfolio.portfolio': ApiPortfolioPortfolio;
       'api::team.team': ApiTeamTeam;
       'admin::permission': AdminPermission;
       'admin::user': AdminUser;
